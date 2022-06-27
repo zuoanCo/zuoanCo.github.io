@@ -10,7 +10,7 @@
     
     <title>
         
-            Tag: chrome, 前端 | 
+            tags | 
         
         zuoanCo
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zuoanCo.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Tag: chrome, 前端 | zuoanCo">
+    <meta property="og:title" content="tags | zuoanCo">
     <meta property="og:description" content="">
 
     <!--[if lte IE 9]>
@@ -210,87 +210,63 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2022/06/27/chrome%E9%AB%98%E7%BA%A7%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">chrome高级调试技巧</a></p>
-    </div>
+<!-- Layouts -->
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ​        今天在掘金上面看到了一篇文章列举了很多一般不知道的chrome调试技巧，感觉非常好用，在这里做个记录，也分享给大家。文章作者@
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2022/06/27/chrome%E9%AB%98%E7%BA%A7%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/" target="_self">Continue Reading</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="zunkai's avatar">
-            </div>
-            <div>
-                <strong>zunkai</strong>
-                <span>Jun 27, 2022</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
+    <!-- Tags Cloud -->
+    <style>
+    #bottom{
+        position: relative;
+    }
 
-            
+    @media screen and (max-width: 480px) {
+        .material-tagscloud{
+            margin: 6em 2em 0;
+        }
+    }
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
+    .material-tagscloud a{
+        text-decoration:none;
+        padding: 1px 9px;
+        margin: 9px 1px;
+        line-height: 40px;
+        white-space: nowrap;
+        transition: .6s;
+        opacity: .85;
+    }
+
+    .material-tagscloud a:hover{
+        transition: .6s;
+        opacity: 1;
+        background: #FAFAFA;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+</style>
+
+<div class=" material-tagscloud">
+    <div class="material-post mdl-grid">
+        <a href="/tags/chrome-%E5%89%8D%E7%AB%AF/" style="font-size: 16px; color: #757575">chrome, 前端</a>
     </div>
 </div>
 
-        
-        
-    
 
-    
+<script>
+    var adjustFooter = function() {
+        if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
+            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
+            $('#bottom').css('bottom', '-' + footerBottom + 'px');
+        }
+    };
 
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $(document).ready(function() {
+        adjustFooter();
+    });
 </script>
 
-    
-</div>
+
+
 
 
                     
